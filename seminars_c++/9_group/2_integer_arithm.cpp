@@ -6,14 +6,17 @@ int main() {
     int num;
     std::cout << "Enter number:\n";
     
-    //if (!(std::cin >> num)) {
-    //    std::cout << "you must input an integer number!\n";
-    //    std::exit(-1);
-    //}
-    while (!(std::cin >> num)) {
-        std::cout << "you must input an integer number!\n";
-        std::exit(-1);
+    if (!(std::cin >> num)) {
+       std::cout << "you must input an integer number!\n";
+       std::exit(-1);
     }
+
+    // until correct input - bad!
+    // while (!(std::cin >> num)) {
+    //     std::cout << "you must input an integer number! try again!\n";
+    //     std::cin.clear();
+    //     std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+    // }
 
     int digit_sum = 0;
     int curr_digit;
