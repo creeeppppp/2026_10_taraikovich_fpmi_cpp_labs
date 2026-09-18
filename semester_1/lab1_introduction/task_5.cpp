@@ -16,10 +16,10 @@ int main(){
     int x = 0;
     int b = 1;
     cout<< 0<<" ";
-    for(n; n>1; n-- ){
+    for(n; n > 1; n--) {
         x = x + b;
         b = x - b;
-        cout<<x<<" ";
+        cout << x <<" ";
     }
     return 0;
 }

@@ -1,5 +1,5 @@
 #include <iostream>
-#include <numeric>
+#include <numeric>nb
 
 int Gcd(int a, int b) {
     while (a * b) {

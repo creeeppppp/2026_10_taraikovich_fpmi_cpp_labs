@@ -35,7 +35,7 @@ int main(){
             f = true;
         }
     }
-    if (f == false){
+    if (!f){
         cout<<"Нет подходящих членов";
     }
     return 0;
