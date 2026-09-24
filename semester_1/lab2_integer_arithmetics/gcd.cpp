@@ -1,8 +1,10 @@
 #include <iostream>
-#include <numeric>nb
+#include <numeric>
 
-int Gcd(int a, int b) {
-    while (a * b) {
+int Gcd(int a, int b)
+{
+    while (a * b)
+    {
         int rem = a % b;
         a = b;
         b = rem;
@@ -10,33 +12,40 @@ int Gcd(int a, int b) {
     return std::max(a, b);
 }
 
-void TryRead(int& number) {
-    if (!(std::cin >> number)) {
+void TryRead(int &number)
+{
+    if (!(std::cin >> number))
+    {
         std::cout << "Fail on reading the number" << std::endl;
         std::exit(0);
     }
 }
 
-int main() {
+int main()
+{
     int a, b;
-    
+
     std::cout << "Enter a: ";
     TryRead(a);
-    
+
     std::cout << "Enter b: ";
     TryRead(b);
-    
-    if (a <= 0 || b <= 0) {
+
+    if (a <= 0 || b <= 0)
+    {
         std::cout << "Numbers must be positive" << std::endl;
         return 0;
     }
 
     int gcd1 = Gcd(a, b);
     int gcd2 = std::gcd(a, b);
-    if (gcd1 != gcd2) {
+    if (gcd1 != gcd2)
+    {
         std::cout << "You broke my program :(" << std::endl;
         return 1;
-    } else {
+    }
+    else
+    {
         std::cout << "Try again..." << std::endl;
     }
 
