@@ -1,16 +1,6 @@
 #include <iostream>
 
-int nod(int x, int y)
-{
-    int temp;
-    while (y != 0)
-    {
-        temp = y;
-        y = x % y;
-        x = temp;
-    }
-    return temp;
-}
+bool al(int x, int y);
 
 int main()
 {
@@ -41,14 +31,7 @@ int main()
             {
                 break;
             }
-
-            /*int tm = m, tk = k;
-                while(tk != 0){
-                    int temp = tk;
-                    tk = tm % tk;
-                    tm = temp;
-                }*/
-            if ((nod(m, k) == 1) && ((m - k) % 2 != 0))
+            if (al(m, k))
             {
                 cout << "(" << a << ", " << b << ", " << c << ")" << std::endl;
                 while ((c * j) <= n)
@@ -63,11 +46,19 @@ int main()
         k++;
     }
 }
-
-/*int nod(int x, int y){
-    while(y != 0){
-        int temp = y;
+bool al(int x, int y)
+{
+    int s = (x - y) % 2;
+    int temp;
+    while (y != 0)
+    {
+        temp = y;
         y = x % y;
         x = temp;
     }
-}*/
+    if ((temp == 1) && (s != 0))
+    {
+        return true;
+    }
+    return false;
+}
