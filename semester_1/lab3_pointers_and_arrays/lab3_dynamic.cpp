@@ -9,6 +9,7 @@ void vvod(int *arr, int x)
         if (!(std::cin >> arr[i]))
         {
             std::cout << "Элемент массива должен быть целым числом.";
+            delete[] arr;
             std::exit(-1);
         }
     }
@@ -66,6 +67,7 @@ int main()
     if (!(std::cin >> answer) || (answer != "Вручную" && answer != "Random"))
     {
         std::cout << "Неверный ввод.";
+        delete[] arr9;
         return (-1);
     }
     if (answer == "Вручную")
@@ -79,12 +81,14 @@ int main()
         if (!(std::cin >> c >> d))
         {
             std::cout << "Неверный ввод.";
-            std::exit(-1);
+            delete[] arr9;
+            return (-1);
         }
         if (c > d)
         {
             std::cout << "c должно быть меньше d";
-            std::exit(-1);
+            delete[] arr9;
+            return (-1);
         }
         randompr(arr9, n, c, d, gen);
         task9(arr9, n);
