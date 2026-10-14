@@ -3,7 +3,6 @@
 void vvod(int *arr, int x)
 {
     std::cout << "Введите элементы массива. ";
-    int move = 1;
     for (int i = 0; i < x; i++)
     {
         if (!(std::cin >> arr[i]))
