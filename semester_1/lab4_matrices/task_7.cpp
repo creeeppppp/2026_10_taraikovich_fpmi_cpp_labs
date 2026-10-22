@@ -1,5 +1,6 @@
 #include <iostream>
 #include <random>
+#include <iomanip>
 
 int **create_matrix(int n, int m)
 {
@@ -65,7 +66,7 @@ void print(int **matrix, int n, int m)
     {
         for (int j = 0; j < m; j++)
         {
-            std::cout << matrix[i][j] << " ";
+            std::cout << std::setw(4) << matrix[i][j] << " ";
         }
         std::cout << "\n";
     }
