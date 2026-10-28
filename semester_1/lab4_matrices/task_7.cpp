@@ -4,8 +4,7 @@
 
 int **create_matrix(int n, int m)
 {
-    int **mat;
-    mat = new int *[n];
+    int **mat = new int *[n];
     for (int i = 0; i < n; i++)
     {
         mat[i] = new int[m];
@@ -29,7 +28,7 @@ int **task_7(int n, int m, int **matrix)
     {
         for (int j = 0; j < m; j++)
         {
-            matrix_res[i][j] = col_sum[j] + row_sum[i] - matrix[i][j];
+            matrix_res[i][j] = col_sum[j] + row_sum[i] - 2 * matrix[i][j];
         }
     }
     delete[] row_sum;
