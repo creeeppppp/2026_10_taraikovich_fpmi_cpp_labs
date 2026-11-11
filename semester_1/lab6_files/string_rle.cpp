@@ -110,6 +110,8 @@ int main()
         log_file(FormatTime(Now(), false) + " | opening and writing to file \"" + output_filename + "\"\n", log_filename);
         write_string_to_file(result, output_filename);
         log_file(FormatTime(Now(), false) + " | result written to \"" + output_filename + "\" successfully\n", log_filename);
+        std::cout << "Original text: " << text << "\n";
+        std::cout << "Result: " << result;
 
     }
     catch (const std::string& msg) {
